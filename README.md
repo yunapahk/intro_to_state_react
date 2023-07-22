@@ -2,21 +2,13 @@
 
 <img src="https://i.imgur.com/KRmlOo1.png" width=500/>
 
-## Learning Objectives
-
-After this lesson you will be able to:
-
-- Explain what `state` is and how to implement it in React
-- Use `Array Destructuring` to create variables from an array 
-- Update `state` and re-render the Component
-
 ## Framing
 
-The best analogy to understand React `state` is to start by answering the following question: **How are you feeling this very moment?**
+Think of `state` this way: **How are you feeling right now?**
 
-- Are you happy to be in class learning a new topic?
-- Are you frustrated having to sit in class for the next several hours learning even more React?
-- Did some random person say `hello` out of the blue make you smile?
+- Are you happy?
+- Are you frustrated with the several hours learning even more React?
+- What can be said that would make you happy?
 
 The answer to any one of those questions has a direct impact on your `state` of mind.  A `happy` state will be reflected in your smile, tone of voice, being nice to others in return. An `unhappy` state will have the opposite effect.
 
@@ -29,9 +21,9 @@ Therefore updating an applications `state` is our control mechanism for how we u
 
 ## Intro To State
 
-In our attempt to provide a coherent framing of React `state` the point was made that what you see on the page is the current version of the applications `state`. Any changes to `state` will then be reflected in the UI.
+The point trying to be made is that what you see on the page is the current version of the applications `state`. Any changes to `state` will then be reflected in the UI.
 
-One important thing to note here is that any changes to state will cause the Component to `re-render`.This is essentially how the UI is updated. 
+One important thing to note is that any changes to state will cause the Component to `re-render`.This is essentially how the UI is updated. 
 
 This is a very important concept to keep in mind as a `re-render` can also initiate additional function calls, something we will discuss as part of Reacts `lifecycle methods`.
 
@@ -49,18 +41,16 @@ This is a very important concept to keep in mind as a `re-render` can also initi
 
 So updating state will, most often, require the user to interact with the application. Hence, the user performs some action, like clicking a button, and the component responds by `doing a thing` and then updating `state`.
 
-Now it's time to dive in and build a small Counter app that contains state.
-
 ### A Simple Counter Component
 
-We'll walk through building a very simple `Counter` Component which will do the following:
+Here is an example of a `Counter` Component which will do the following:
 
 -  provide the user 2 buttons to increment or decrement
 - display the initial and update value as it changes 
 
 #### Spin Up A New React Project
 
-For this demo you will spin up a new React Project `npx create-react-app intro_to_state`
+Create a new React Project `npx create-react-app intro_to_state`
 
 #### Creating The Counter Component
 
@@ -104,7 +94,7 @@ Once your done React should render the following:
 
 <img src="https://i.imgur.com/fBEOYU0.png" width=300/>
 
-That HTML looks like it could use a little styling.  So lets copy/paste the following css to `styles.css`
+Copy/paste the following css to `styles.css`
 
 <details>
 <summary>CSS</summary>
@@ -138,17 +128,17 @@ span {
 <br>
 
 
-And now the design should update to look like:
+Update should look like:
 
 <img src="https://i.imgur.com/jTh9SU2.png" width=200/>
 
 <hr>
 
-### The useState Hook
+### useState Hook
 
 In order to add state to the `Counter` Component we will first need to import the `useState` Hook from `React`. `useState` is one of the 3 Basic Hooks as per the Official React Doc.
 
-#### A Word On Hooks
+#### Hooks
 
 Hooks were introduced in `React Version 16.8`. Before hooks, all state needed to be placed within a `Class` component. 
 
@@ -183,7 +173,7 @@ We would see everything it has to offer include `useState`
 <img src="https://i.imgur.com/soVHfMl.png" width=500/>
 
 
-Since we are familiar with `Object Destructuring` let's use it to elicit the value of this key and store in a variable simultaneously. 
+Since we are familiar with `Object Destructuring` use it to elicit the value of this key and store in a variable simultaneously. 
 
 
 
@@ -215,7 +205,7 @@ We will revisit this concept later when we cover the `useReducer` hook as it use
 
 #### useState Rules and Best Practices
 
-Let's take a moment to once again review the `rules` of `useState` and include some best practices as well. 
+Take a moment to once again review the `rules` of `useState` and include some best practices as well. 
 
 :oncoming_police_car: - Rules 
 
@@ -292,7 +282,7 @@ const [count, setCount] = useState(0);
 
 Now that our initial value is been assigned to the `count` variable let's update the JSX to use that value instead of a current hard coded value of 0. 
 
-Of course, as has been stated several times already, JSX requires that all JavaScript be surrounded in curly braces.
+As stated before, JSX requires that all JavaScript be surrounded in curly braces.
 
 
 ```js
@@ -323,9 +313,9 @@ setCount(count + 1);
 // use a callback function and pass the previous version of state
 setCount((prevState) => prevState + 1);
 ```
-In the second example the setter function takes in an callback function that is passed  the previous value of state and returns a new value altogether. 
+In the second example the setter function takes in an callback function that is passed the previous value of state and returns a new value altogether. 
 
-The argument in this example is called `prevState` by convention but you can name it anything you want. 
+The argument in this example is called `prevState` by convention but it can be named anything you want. 
 
 There are scenarios when the callback function version is required such as when state is being updated within the callbacks of either a `setTimeout()` or `setInterval()`.  Since that isn't the case here we will use the first example to update state. 
 
