@@ -56,7 +56,7 @@ Create a new React Project `npx create-react-app intro_to_state`
 
 <hr>
 
-#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 3min
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">
 
 Since you already have experience creating Components take a minute to perform the following activity.
 
@@ -146,7 +146,7 @@ Hooks introduce state management to `Functional` components, using a simpler and
 
 <hr>
 
-#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">
 
 Since we will be working with `Hooks` solely in this class let's take a minute to review the following React Docs:
 
