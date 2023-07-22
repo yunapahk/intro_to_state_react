@@ -94,41 +94,7 @@ Once your done React should render the following:
 
 <img src="https://i.imgur.com/fBEOYU0.png" width=300/>
 
-Copy/paste the following css to `styles.css`
-
-<details>
-<summary>CSS</summary>
-
-
-```css
-.App {
-	font-family: sans-serif;
-	text-align: center;
-	width: 160px;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-}
-
-section {
-	display: flex;
-}
-
-button {
-	flex: 1;
-}
-
-span {
-	font-size: 20px;
-}
-```
-
-</details>
-
-<br>
-
-
-Update should look like:
+Update `styles.css` to look like:
 
 <img src="https://i.imgur.com/jTh9SU2.png" width=200/>
 
